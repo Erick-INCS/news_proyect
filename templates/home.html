@@ -3,13 +3,21 @@
 
 {% block content %}
 
-    {% if user.is_authenticated %}
-    Hi {{user.name}} You are {{user.age}} years old.
-        <p><a href="{% url 'logout' %}"> Log Out</a></p>
-    {% else %}
-        <p>You are not logged in</p>
-        <a href="{% url 'login' %}">Log In</a>
-        <a href="{% url 'signup' %}">Sign Up</a>
-    {% endif %}
+{% if user.is_authenticated %}
+Hi {{user.name}} You are {{user.age}} years old.
+<p><a href="{% url 'logout' %}"> Log Out</a></p>
+{% else %}
+<p>You are not logged in</p>
+<a href="{% url 'login' %}">Log In</a>
+<a href="{% url 'signup' %}">Sign Up</a>
+{% endif %}
 
+<br>
+    <div class="jumbotron">
+        <h1 class="display-4">News papper app</h1>
+        <p class="lead"></p>
+        <p class="lead">
+            <a class="btn btn-primary btn-lg" href="{% url 'article_list' %}">View All articles</a>
+        </p>
+    </div>
 {% endblock content %}
