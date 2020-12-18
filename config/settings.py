@@ -86,7 +86,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': env.dj_db_url('DATABASE_URL')
-        # {
+    # 'default': {
     #     'ENGINE': 'django.db.backends.sqlite3',
     #     'NAME': BASE_DIR / 'db.sqlite3',
     # }
@@ -146,7 +146,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 DEFAULT_FROM_EMAIL = 'cuentadeerickv3.1416@gmail.com'
 EMAIL_HOST = 'smtp.sendgrid.net'
 EMAIL_HOST_USER = 'apikey'
-EMAIL_HOST_PASSWORD = env
+EMAIL_HOST_PASSWORD = env('SENDGRID_KEY')
 EMAIL_HOST_PORT = 587
 EMAIL_USE_TLS = True
 TIME_ZONE = 'America/Tijuana'
