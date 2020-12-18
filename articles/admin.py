@@ -7,7 +7,6 @@ class CommentInline(admin.TabularInline): #admin.StackedInline
     extra = 0
 
 
-
 class ArtcleAdmin(admin.ModelAdmin):
     inlines = [
         CommentInline,

@@ -4,9 +4,6 @@ from .forms import CustomUserCreationform, CustomUserChangeForm
 from .models import CustomUser
 
 class CustomUserAdmin(UserAdmin):
-    """
-    docstring
-    """
     add_form = CustomUserCreationform
     form = CustomUserChangeForm
     model = CustomUser
@@ -18,7 +15,5 @@ class CustomUserAdmin(UserAdmin):
     add_fieldsets = UserAdmin.add_fieldsets + (
         (None, {'fields': ('age', 'nice_name',)}),
     )
-    
-    
     
 admin.site.register(CustomUser, CustomUserAdmin)
