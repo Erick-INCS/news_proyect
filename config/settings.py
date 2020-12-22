@@ -127,9 +127,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = '/static/'
-STATIC_DIR = [str(BASE_DIR.joinpath('static'))]
-STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles'))
+STATIC_URL          = '/static/'
+STATICFILES_DIRS    = [str(BASE_DIR.joinpath('static'))]
+STATIC_ROOT         = str(BASE_DIR.joinpath('staticfiles'))
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 AUTH_USER_MODEL = 'accounts.CustomUser' #new
@@ -142,10 +142,12 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-DEFAULT_FROM_EMAIL = 'cuentadeerickv3.1416@gmail.com'
-EMAIL_HOST = 'smtp.sendgrid.net'
-EMAIL_HOST_USER = 'apikey'
-EMAIL_HOST_PASSWORD = env('SENDGRID_KEY')
+DEFAULT_FROM_EMAIL = 'ericksmtp@outlook.com'
+# DEFAULT_FROM_EMAIL = 'cuentadeerickv3.1416@gmail.com'
+# EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST = 'smtp.office365.com'
+EMAIL_HOST_USER = 'ericksmtp@outlook.com'
+EMAIL_HOST_PASSWORD = "simtoquamicrosoft17"
 EMAIL_HOST_PORT = 587
-EMAIL_USE_TLS = True
+EMAIL_USE_TLS = False
 TIME_ZONE = 'America/Tijuana'

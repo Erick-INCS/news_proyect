@@ -1,14 +1,24 @@
 {% extends 'base.html' %}
 {% block title %} Home {% endblock title %}
 
+{% block extra %}
+<div class="hero">
+    <div class="h-100 content d-flex justify-content-center align-items-center">
+        <h1>Newspaper App</h1>
+        <hr>
+        <a class="btn btn-outline-primary" href="{% url 'article_list' %}">View All Articles</a>
+    </div>
+</div>
+{% endblock extra %}
+
 {% block content %}
 
-<br>
-    <div class="jumbotron">
-        <h1 class="display-4">News papper app</h1>
-        <p class="lead"></p>
-        <p class="lead">
-            <a class="btn btn-primary btn-lg" href="{% url 'article_list' %}">View All articles</a>
-        </p>
-    </div>
+<!-- <br>
+<div>
+    <h1 class="display-4">Last news</h1>
+    
+    <p class="lead">
+        <a class="btn btn-primary btn-lg" href="{% url 'article_list' %}">View All articles</a>
+    </p>
+</div> -->
 {% endblock content %}
