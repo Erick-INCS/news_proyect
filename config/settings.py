@@ -149,5 +149,5 @@ EMAIL_HOST = 'smtp.office365.com'
 EMAIL_HOST_USER = 'ericksmtp@outlook.com'
 EMAIL_HOST_PASSWORD = "simtoquamicrosoft17"
 EMAIL_HOST_PORT = 587
-EMAIL_USE_TLS = False
+EMAIL_USE_TLS = True
 TIME_ZONE = 'America/Tijuana'
