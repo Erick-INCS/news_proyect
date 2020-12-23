@@ -25,7 +25,7 @@ class Comment(models.Model):
     author = models.ForeignKey(
         get_user_model(),
         on_delete=models.CASCADE,
-        related_name='comment'
+        related_name='comments'
     )
     
     def __str__(self):
